@@ -1,0 +1,19 @@
+<!doctype html>
+
+<html ng-app='myapp' lang='en'>
+  <head>
+    <meta charset='utf-8'>
+    <title>YOUR TITLE GOES HERE</title>
+  </head>
+  <body>
+    <!-- Or use your own controller -->
+    <div ng-controller='MyController'>
+      <ul ng-repeat='phone in phones'>
+        <li>{{phone.name}} - {{phone.description}}</li>
+      </ul>
+    </div>
+
+    <script src='angular.js'></script>
+    <script src='script.js'></script>
+  </body>
+</html>

@@ -3,13 +3,12 @@
 <html ng-app='myapp' lang='en'>
   <head>
     <meta charset='utf-8'>
-    <title>YOUR TITLE GOES HERE</title>
+    <title>IAT 340 Sound Credit</title>
   </head>
   <body>
-    <!-- Or use your own controller -->
     <div ng-controller='MyController'>
-      <ul ng-repeat='phone in phones'>
-        <li>{{phone.name}} - {{phone.description}}</li>
+      <ul ng-repeat='sound in sounds'>
+        <li>{{sounds.name}} | {{sounds.description}}</li>
       </ul>
       {{myCatName}}
     </div>

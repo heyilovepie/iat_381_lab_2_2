@@ -3,14 +3,25 @@
 <html ng-app='myapp' lang='en'>
   <head>
     <meta charset='utf-8'>
-    <title>IAT 340 Sound Credit</title>
+    <title>GR</title>
   </head>
   <body>
     <div ng-controller='MyController'>
-      <ul ng-repeat='sound in sounds'>
-        <li>{{sounds.name}} | {{sounds.description}}</li>
+        <s1> BEER </s1>
+    <p>
+      Insert beer:
+      <input ng-model="text" type="text" />
+    </p>
+    <p>
+     {{text}}   
+    </p>
+    <p>
+      <li> {{text.split(" ")}} </li>
+      <li> This is always empty because I can't find a way to actively change this variable </li>
+      <li> {{words}} </li>
+      <ul ng-repeat='beer in beers'>
+        <li>{{beer.name}} | {{beer.brewery}}</li>
       </ul>
-      {{myCatName}}
     </div>
 
     <script src='angular.js'></script>

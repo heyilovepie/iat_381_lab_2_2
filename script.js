@@ -1,16 +1,36 @@
-var myapp = angular.module('myapp', []);
+var myapp = angular.module("myapp", []);
 
-myapp.controller('MyController', function ($scope) {
-  $scope.sounds = [
-    { name: 'Light', description: 'http://www.freesound.org/people/hanstimm/sounds/9164/' },
-    { name: 'Machine', description: 'http://www.freesound.org/people/harri/sounds/9207/' },
-    { name: 'Glass', description: 'http://www.freesound.org/people/harri/sounds/9209/' },
-    { name: 'Machine', description: 'http://www.freesound.org/people/UATaudio/sounds/31155/' },
-    { name: 'Squeek', description: 'http://www.freesound.org/people/johnnypanic/sounds/34567/' },
-    { name: 'Glass', description: 'http://www.freesound.org/people/juskiddink/sounds/62055/' },
-    { name: 'Machine', description: 'http://www.freesound.org/people/suoitnop/sounds/66262/' },
-    { name: 'Light', description: 'http://www.freesound.org/people/JoelAudio/sounds/77691/' },
-    { name: 'Machine', description: 'http://www.freesound.org/people/Robinhood76/sounds/103635/' },
-    { name: 'Door', description: 'http://www.freesound.org/people/joedeshon/sounds/117416/' }
+myapp.controller("MyController", function ($scope) {
+  $scope.text = "klnlknlk lkjlkj kljlkjjjjjj";
+
+  $scope.words = new Array();
+
+  $scope.beers = [
+  new Beer("first beer", "The first brewery", 9.0,
+    ["ale", "pale ale"]),
+  new Beer("second beer", "The second brewery", 8.2,
+    ["ale", "brown ale"]),
+  new Beer("third beer", "The third brewery", 9.5,
+    ["ale", "pale ale", "strong pale ale"]),
+  new Beer("fourth beer", "The fourth brewery", 5.0,
+    ["lagers", "germal lager"])
   ];
+
+  function Beer(name, brewery, percentage, categories)
+  {
+    this.name = name;
+    this.brewery = brewery;
+    this.percentage = percentage;
+    this.categories = categories;
+
+    function isInCategory(type){
+    var isTrue = false;
+    for ( var i = 0; i < categories.length; i++){
+        var cat = categories[i];
+        if(cat === type) isTrue = true;
+    }
+    if(type == "") isTrue = true;
+    return isTrue;
+  }
+  }
 });

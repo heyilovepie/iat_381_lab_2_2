@@ -3,15 +3,24 @@
 <html ng-app='myapp' lang='en'>
   <head>
     <meta charset='utf-8'>
-    <title>YOUR TITLE GOES HERE</title>
+    <title>GR</title>
   </head>
   <body>
-    <!-- Or use your own controller -->
     <div ng-controller='MyController'>
-      <ul ng-repeat='phone in phones'>
-        <li>{{phone.name}} - {{phone.description}}</li>
-      </ul>
-      {{myCatName}}
+        <s1> BEER </s1>
+    <p>
+      Insert beer:
+      <input ng-model="text" type="text" />
+    </p>
+    <p>
+     {{text}}   
+    </p>
+      <table>
+        <tr><th>BEERS</th></tr>
+        <tr ng-repeat="beer in beers | filter:text">
+         <td>{{beer.name}} </td>    <td>{{beer.brewery}}</td>
+        </tr>
+    </table>
     </div>
 
     <script src='angular.js'></script>
